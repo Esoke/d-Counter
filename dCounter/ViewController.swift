@@ -24,10 +24,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
+        self.addDoneButtonOnKeyboard()
     }
 
 
-    func playSound(resource:String) {
+    func playSound(_ resource:String) {
         if mute == false{
             let url = Bundle.main.url(forResource: resource, withExtension: "mp3")!
         
@@ -53,13 +54,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func plusPressed(_ sender: Any) {
         count += 1
         updateCount()
-        playSound(resource: PLUS_SOUND)
+        playSound(PLUS_SOUND)
     }
 
     @IBAction func minusPressed(_ sender: Any) {
         count -= 1
         updateCount()
-        playSound(resource: MINUS_SOUND)
+        playSound(MINUS_SOUND)
         
     }
     
@@ -85,9 +86,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-       // count = Int(countField.text!) ?? count
 
+    func addDoneButtonOnKeyboard()
+    {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle = UIBarStyle.blackTranslucent
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(ViewController.doneButtonAction))
+        
+        let items = [flexSpace, done]
+  
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.countField.inputAccessoryView = doneToolbar
+        
+    }
     
+    func doneButtonAction()
+    {
+        self.countField.resignFirstResponder()
+        
+        count = Int(countField.text!) ?? count
+    }
     
     
     
