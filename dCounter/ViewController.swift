@@ -17,14 +17,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let MINUS_SOUND = "minusSound"
     let PLUS_SOUND = "clickSound"
     
+    
+    @IBOutlet weak var minusButton: UIButton!
+    
+    @IBOutlet weak var plusButton: UIButton!
+    
     @IBOutlet weak var countField: UITextField!
     
     @IBOutlet weak var soundButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        countField.delegate = self
+        
         //--- add UIToolBar on keyboard and Done button on UIToolBar ---//
         self.addDoneButtonOnKeyboard()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        //not interfere and cancel other interactions.
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+
     }
 
 
@@ -108,11 +121,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func doneButtonAction()
     {
         self.countField.resignFirstResponder()
-        
+    }
+    
+    //Calls this function when the tap is recognized or done is pressed
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
         count = Int(countField.text!) ?? count
     }
     
     
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        disableButtons()
+ 
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        enableButtons()
+    }
+    
+    func disableButtons(){
+        soundButton.isUserInteractionEnabled = false
+        plusButton.isUserInteractionEnabled = false
+        minusButton.isUserInteractionEnabled = false
+    }
+    
+    func enableButtons(){
+        soundButton.isUserInteractionEnabled = true
+        plusButton.isUserInteractionEnabled = true
+        minusButton.isUserInteractionEnabled = true
+    }
     
 }
 

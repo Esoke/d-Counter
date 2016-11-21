@@ -67,6 +67,8 @@
                     </view>
                     <connections>
                         <outlet property="countField" destination="DHK-j6-tXr" id="5Rb-OZ-juS"/>
+                        <outlet property="minusButton" destination="Cvb-MM-u2j" id="Oez-8D-B6u"/>
+                        <outlet property="plusButton" destination="UtP-rV-ZU8" id="tdk-Zi-b0w"/>
                         <outlet property="soundButton" destination="pp2-89-tLx" id="HlK-um-b5G"/>
                     </connections>
                 </viewController>
