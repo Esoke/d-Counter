@@ -12,6 +12,9 @@
 		FE6C6CB21DE2064F0052A7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6C6CB01DE2064F0052A7CE /* Main.storyboard */; };
 		FE6C6CB41DE2064F0052A7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6C6CB31DE2064F0052A7CE /* Assets.xcassets */; };
 		FE6C6CB71DE2064F0052A7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6C6CB51DE2064F0052A7CE /* LaunchScreen.storyboard */; };
+		FE91D56E1DE214A5003E90C4 /* Credits in Resources */ = {isa = PBXBuildFile; fileRef = FE91D56D1DE214A5003E90C4 /* Credits */; };
+		FE91D5701DE214DF003E90C4 /* clickSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE91D56F1DE214DF003E90C4 /* clickSound.mp3 */; };
+		FE91D5721DE22112003E90C4 /* minusSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE91D5711DE22112003E90C4 /* minusSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +22,12 @@
 		FE6C6CAC1DE2064F0052A7CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE6C6CAE1DE2064F0052A7CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE6C6CB11DE2064F0052A7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE6C6CB31DE2064F0052A7CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE6C6CB31DE2064F0052A7CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = dCounter/Assets.xcassets; sourceTree = "<group>"; };
 		FE6C6CB61DE2064F0052A7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE6C6CB81DE2064F0052A7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE91D56D1DE214A5003E90C4 /* Credits */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Credits; path = ../Credits; sourceTree = "<group>"; };
+		FE91D56F1DE214DF003E90C4 /* clickSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clickSound.mp3; sourceTree = "<group>"; };
+		FE91D5711DE22112003E90C4 /* minusSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = minusSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,34 @@
 		FE6C6CAB1DE2064F0052A7CE /* dCounter */ = {
 			isa = PBXGroup;
 			children = (
-				FE6C6CAC1DE2064F0052A7CE /* AppDelegate.swift */,
 				FE6C6CAE1DE2064F0052A7CE /* ViewController.swift */,
-				FE6C6CB01DE2064F0052A7CE /* Main.storyboard */,
-				FE6C6CB31DE2064F0052A7CE /* Assets.xcassets */,
-				FE6C6CB51DE2064F0052A7CE /* LaunchScreen.storyboard */,
+				FE6C6CBE1DE2065A0052A7CE /* View */,
+				FE91D5731DE28249003E90C4 /* Sources */,
+				FE6C6CAC1DE2064F0052A7CE /* AppDelegate.swift */,
+				FE91D56D1DE214A5003E90C4 /* Credits */,
 				FE6C6CB81DE2064F0052A7CE /* Info.plist */,
 			);
 			path = dCounter;
+			sourceTree = "<group>";
+		};
+		FE6C6CBE1DE2065A0052A7CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE6C6CB01DE2064F0052A7CE /* Main.storyboard */,
+				FE6C6CB51DE2064F0052A7CE /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FE91D5731DE28249003E90C4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FE6C6CB31DE2064F0052A7CE /* Assets.xcassets */,
+				FE91D56F1DE214DF003E90C4 /* clickSound.mp3 */,
+				FE91D5711DE22112003E90C4 /* minusSound.mp3 */,
+			);
+			name = Sources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +123,7 @@
 					FE6C6CA81DE2064F0052A7CE = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = Z7U543763F;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,9 +151,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE91D5701DE214DF003E90C4 /* clickSound.mp3 in Resources */,
 				FE6C6CB71DE2064F0052A7CE /* LaunchScreen.storyboard in Resources */,
+				FE91D56E1DE214A5003E90C4 /* Credits in Resources */,
 				FE6C6CB41DE2064F0052A7CE /* Assets.xcassets in Resources */,
 				FE6C6CB21DE2064F0052A7CE /* Main.storyboard in Resources */,
+				FE91D5721DE22112003E90C4 /* minusSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z7U543763F;
 				INFOPLIST_FILE = dCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Esma.dCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z7U543763F;
 				INFOPLIST_FILE = dCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Esma.dCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +332,7 @@
 				FE6C6CBD1DE2064F0052A7CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
